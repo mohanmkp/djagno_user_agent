@@ -48,7 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_ip_geolocation.middleware.IpGeolocationMiddleware',
+
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -125,5 +125,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-USE_X_FORWARDED_FOR = True
+import os
+
+GEOIP_PATH =os.path.join('geoip')
 
