@@ -15,8 +15,10 @@ def get_user_location(request):
         print("else ", address)
 
     geoip2 = GeoIP2()
-    country = geoip2.country(request.META['REMOTE_ADDR'])
-    print(country)
+    print(geoip2.country(address))
+    print(geoip2.city(address))
+    print(geoip2.lat_lon("salon.com"))
+
 
     return HttpResponse("done")
 
