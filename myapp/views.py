@@ -43,6 +43,6 @@ def get_user_location(request):
     longitude = 76.68885032715428
     location_info = get_location(latitude, longitude)
     print(location_info)
-    return HttpResponse("done")
+    return HttpResponse(f"done {location_info}")
 
 
